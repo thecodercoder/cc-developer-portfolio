@@ -1,0 +1,32 @@
+@use '../util' as u;
+
+.button {
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.8309859154929577rem + 0.18779342723004694vw, 1rem);
+  font-weight: 700;
+  line-height: 1;
+  padding: 11px 21px;
+  border-radius: 60px;
+  transition: 150ms ease-in-out;
+  transition-property: opacity, color, border;
+
+  &.primary {
+    background: var(--color-accent);
+    color: var(--color-background);
+    border: 3px solid var(--color-accent);
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &.secondary {
+    color: var(--color-accent);
+    border: 3px solid var(--color-accent);
+
+    &:hover {
+      border-color: var(--color-text);
+      color: var(--color-text);
+    }
+  }
+}

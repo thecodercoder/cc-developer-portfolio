@@ -1,0 +1,36 @@
+@use '../util/' as u;
+
+.skills {
+  justify-items: center;
+
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: u.rem(600);
+
+    @include u.breakpoint(medium) {
+      gap: 12px;
+    }
+  }
+
+  &__tag {
+    background: var(--color-accent2);
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9559859154929577rem + 0.18779342723004694vw, 1.125rem);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 150ms ease-in-out;
+
+    @include u.breakpoint(medium) {
+      padding: 14px 24px;
+    }
+
+    &:hover {
+      background: var(--color-accent2-hover);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use '../util' as u;
+
+.contact {
+  @include u.breakpoint(medium) {
+    justify-items: center;
+  }
+
+  &__links {
+    display: grid;
+    gap: 16px;
+  }
+
+  &__link,
+  path {
+    transition: 150ms ease-in-out;
+    transition-property: color, fill;
+  }
+
+  &__link {
+    display: grid;
+    grid-template-columns: u.rem(24) auto;
+    gap: 20px;
+    align-items: center;
+    width: fit-content;
+    font-size: u.rem(18);
+    font-weight: 700;
+    color: var(--color-text);
+
+    &:hover {
+      color: var(--color-accent);
+
+      path {
+        fill: var(--color-accent);
+      }
+    }
+  }
+}

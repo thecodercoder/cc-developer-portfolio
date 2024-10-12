@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.625rem;
+  font-size: clamp(2.625rem, 2.140845070422535rem + 2.0657276995305165vw, 4rem);
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.9859154929577465rem + 1.1267605633802815vw, 3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.2359154929577465rem + 1.1267605633802815vw, 2.25rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 60ch;
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9119718309859155rem + 0.3755868544600939vw, 1.25rem);
+  line-height: 1.5;
+  margin-block: 1em;
+}

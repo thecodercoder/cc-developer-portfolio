@@ -1,0 +1,27 @@
+@use '../util/' as u;
+
+.hero {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 30px;
+  align-items: center;
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  &__text {
+  }
+
+  &__image {
+    max-width: u.rem(400);
+
+    @include u.breakpoint(medium) {
+      max-width: u.rem(600);
+    }
+
+    img {
+      border-radius: 20px;
+    }
+  }
+}

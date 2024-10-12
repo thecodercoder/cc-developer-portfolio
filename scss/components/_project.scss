@@ -1,0 +1,34 @@
+@use '../util/' as u;
+
+.project {
+  &__item,
+  &__text {
+    display: grid;
+    gap: 16px 40px;
+    align-items: start;
+  }
+
+  &__item {
+    @include u.breakpoint(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 1rem;
+      font-size: clamp(1rem, 0.9559859154929577rem + 0.18779342723004694vw, 1.125rem);
+      margin: 0;
+    }
+  }
+
+  &__image {
+    border-radius: 12px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+  }
+}

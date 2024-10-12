@@ -1,0 +1,22 @@
+@use '../util/' as u;
+
+.header {
+  padding-block: 20px 40px;
+
+  @include u.breakpoint(large) {
+    padding-block: 40px 80px;
+  }
+
+  &__home {
+    display: grid;
+    place-items: center;
+    width: u.rem(46);
+    height: u.rem(46);
+    border-radius: 10px;
+    background: var(--color-accent);
+    color: var(--color-background);
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.4119718309859155rem + 0.3755868544600939vw, 1.75rem);
+    font-weight: 900;
+  }
+}
